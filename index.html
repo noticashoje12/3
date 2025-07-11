@@ -295,12 +295,13 @@
       const params = new URLSearchParams(window.location.search);
       return params.toString();
     };
+document.getElementById('resgatar-premio').addEventListener('click', () => {
+  const queryParams = getQueryParams(); // Supondo que essa função já existe
+  const baseUrl = 'https://3-1-5rpxj507m-noticashojes-projects.vercel.app';
+  const redirectUrl = queryParams ? `${baseUrl}?${queryParams}` : baseUrl;
+  window.location.href = redirectUrl;
+});
 
-    document.getElementById('resgatar-premio').addEventListener('click', () => {
-      const queryParams = getQueryParams();
-      const baseUrl = '3-1-5rpxj507m-noticashojes-projects.vercel.app';
-      const redirectUrl = queryParams ? `${baseUrl}?${queryParams}` : baseUrl;
-      window.location.href = redirectUrl;
     });
 
     window.addEventListener('load', function() {
